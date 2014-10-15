@@ -23,4 +23,17 @@ class DoughnutData
         $this->data[] = $dataset;
     }
 
+    /**
+     * {@inheritdoc}
+     */
+    public function jsonSerialize()
+    {
+        $json = [];
+        foreach ($this->data as $data) {
+            $json[] = $data->jsonSerialize();
+        }
+
+        return $json;
+    }
+
 }

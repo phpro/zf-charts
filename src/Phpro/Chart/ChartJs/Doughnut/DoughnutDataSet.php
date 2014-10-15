@@ -4,6 +4,7 @@ namespace Phpro\Chart\ChartJs\Doughnut;
 
 use Phpro\Chart\ChartJs\DatasetInterface;
 use Zend\Stdlib\AbstractOptions;
+use Zend\Stdlib\Hydrator\ClassMethods;
 
 /**
  * Class Data
@@ -97,6 +98,15 @@ class DoughnutDataSet extends AbstractOptions
     public function setValue($value)
     {
         $this->value = (int) $value;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function jsonSerialize()
+    {
+        $hydrator = new ClassMethods(false);
+        return $hydrator->extract($this);
     }
 
 }

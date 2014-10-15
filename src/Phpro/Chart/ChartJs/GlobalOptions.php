@@ -3,6 +3,7 @@
 namespace Phpro\Chart\ChartJs;
 
 use Zend\Stdlib\AbstractOptions;
+use Zend\Stdlib\Hydrator\ClassMethods;
 
 /**
  * Class GlobalOptions
@@ -813,6 +814,15 @@ class GlobalOptions extends AbstractOptions
     public function setTooltipYPadding($tooltipYPadding)
     {
         $this->tooltipYPadding = $tooltipYPadding;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function jsonSerialize()
+    {
+        $hydrator = new ClassMethods(false);
+        return $hydrator->extract($this);
     }
 
 }

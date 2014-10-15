@@ -4,6 +4,7 @@ namespace Phpro\Chart\ChartJs\Line;
 
 use Phpro\Chart\ChartJs\DataInterface;
 use Zend\Stdlib\AbstractOptions;
+use Zend\Stdlib\Hydrator\ClassMethods;
 
 /**
  * Class LineData
@@ -55,6 +56,20 @@ class LineData extends AbstractOptions
     public function setLabels($labels)
     {
         $this->labels = $labels;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function jsonSerialize()
+    {
+        $hydrator = new ClassMethods(false);
+        $data = $hydrator->extract($this);
+        foreach ($data['datasets'] as $key => $value) {
+            $data['datasets'][$key] = $value->jsonSerialize();
+        }
+
+        return $data;
     }
 
 }

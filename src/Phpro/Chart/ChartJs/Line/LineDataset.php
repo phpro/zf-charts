@@ -3,6 +3,7 @@
 namespace Phpro\Chart\ChartJs\Line;
 
 use Zend\Stdlib\AbstractOptions;
+use Zend\Stdlib\Hydrator\ClassMethods;
 
 /**
  * Class LineDataset
@@ -180,6 +181,15 @@ class LineDataset extends AbstractOptions
     public function setStrokeColor($strokeColor)
     {
         $this->strokeColor = $strokeColor;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function jsonSerialize()
+    {
+        $hydrator = new ClassMethods(false);
+        return $hydrator->extract($this);
     }
 
 } 
