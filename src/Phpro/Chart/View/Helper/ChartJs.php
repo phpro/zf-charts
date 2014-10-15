@@ -58,7 +58,7 @@ class ChartJs extends AbstractHelper
             'chart' => $chart,
             'width' => isset($options['width']) ? $options['width'] : 400,
             'height' => isset($options['height']) ? $options['height'] : 400,
-            'showLegend' => isset($options['showLegend']) ? $options['showLegend'] : true,
+            'show_legend' => isset($options['show_legend']) ? $options['show_legend'] : true,
         ]);
         $viewModel->setTemplate('zf-charts/chartjs');
 
