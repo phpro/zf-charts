@@ -2,6 +2,7 @@
 
 namespace Phpro\Chart\ChartJs\Line;
 
+use Phpro\Chart\ChartJs\DatasetInterface;
 use Zend\Stdlib\AbstractOptions;
 use Zend\Stdlib\Hydrator\ClassMethods;
 
