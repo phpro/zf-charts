@@ -14,171 +14,45 @@ class LineData extends AbstractOptions
 {
 
     /**
-     * @var string
+     * @var array
      */
-    protected $label = 'label';
+    protected $labels = array();
 
     /**
-     * @var string
+     * @var LineDataset[]
      */
-    protected $fillColor = 'rgba(151,187,205,0.2)';
+    protected $datasets = array();
 
     /**
-     * @var string
+     * @return LineDataset[]
      */
-    protected $strokeColor = 'rgba(151,187,205,1)';
-
-    /**
-     * @var string
-     */
-    protected $pointColor = 'rgba(151,187,205,1)';
-
-    /**
-     * @var string
-     */
-    protected $pointStrokeColor = '#fff';
-
-    /**
-     * @var string
-     */
-    protected $pointHighlightFill = '#fff';
-
-    /**
-     * @var string
-     */
-    protected $pointHighlightStroke = 'rgba(151,187,205,1)';
-
-    /**
-     * @var int[]
-     */
-    protected $data = array ();
-
-    /**
-     * @return \int[]
-     */
-    public function getData()
+    public function getDatasets()
     {
-        return $this->data;
+        return $this->datasets;
     }
 
     /**
-     * @param \int[] $data
+     * @param $dataset
      */
-    public function setData($data)
+    public function addDataset($dataset)
     {
-        $this->data = $data;
+        $this->datasets[] = $dataset;
     }
 
     /**
-     * @return string
+     * @return array
      */
-    public function getFillColor()
+    public function getLabels()
     {
-        return $this->fillColor;
+        return $this->labels;
     }
 
     /**
-     * @param string $fillColor
+     * @param array $labels
      */
-    public function setFillColor($fillColor)
+    public function setLabels($labels)
     {
-        $this->fillColor = $fillColor;
-    }
-
-    /**
-     * @return string
-     */
-    public function getLabel()
-    {
-        return $this->label;
-    }
-
-    /**
-     * @param string $label
-     */
-    public function setLabel($label)
-    {
-        $this->label = $label;
-    }
-
-    /**
-     * @return string
-     */
-    public function getPointColor()
-    {
-        return $this->pointColor;
-    }
-
-    /**
-     * @param string $pointColor
-     */
-    public function setPointColor($pointColor)
-    {
-        $this->pointColor = $pointColor;
-    }
-
-    /**
-     * @return string
-     */
-    public function getPointHighlightFill()
-    {
-        return $this->pointHighlightFill;
-    }
-
-    /**
-     * @param string $pointHighlightFill
-     */
-    public function setPointHighlightFill($pointHighlightFill)
-    {
-        $this->pointHighlightFill = $pointHighlightFill;
-    }
-
-    /**
-     * @return string
-     */
-    public function getPointHighlightStroke()
-    {
-        return $this->pointHighlightStroke;
-    }
-
-    /**
-     * @param string $pointHighlightStroke
-     */
-    public function setPointHighlightStroke($pointHighlightStroke)
-    {
-        $this->pointHighlightStroke = $pointHighlightStroke;
-    }
-
-    /**
-     * @return string
-     */
-    public function getPointStrokeColor()
-    {
-        return $this->pointStrokeColor;
-    }
-
-    /**
-     * @param string $pointStrokeColor
-     */
-    public function setPointStrokeColor($pointStrokeColor)
-    {
-        $this->pointStrokeColor = $pointStrokeColor;
-    }
-
-    /**
-     * @return string
-     */
-    public function getStrokeColor()
-    {
-        return $this->strokeColor;
-    }
-
-    /**
-     * @param string $strokeColor
-     */
-    public function setStrokeColor($strokeColor)
-    {
-        $this->strokeColor = $strokeColor;
+        $this->labels = $labels;
     }
 
 }
