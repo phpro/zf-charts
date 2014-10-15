@@ -11,7 +11,9 @@ use Zend\ModuleManager\Feature\DependencyIndicatorInterface;
  * @package Phpro\Chart
  */
 class Module
-    implements ConfigProviderInterface
+    implements
+        ConfigProviderInterface,
+        DependencyIndicatorInterface
 {
 
     /**
