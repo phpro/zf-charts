@@ -2,9 +2,7 @@
 
 namespace Phpro\Chart\ChartJs\Doughnut;
 
-use Phpro\Chart\ChartInterface;
 use Phpro\Chart\ChartJs\AbstractChart;
-use Zend\Stdlib\ArrayObject;
 
 /**
  * Class DoughnutChart
@@ -23,9 +21,9 @@ class DoughnutChart
     protected $type = self::TYPE;
 
     /**
-     * @var ArrayObject
+     * @var array
      */
-    protected $data;
+    protected $data = [];
 
     /**
      * @return DoughnutOptions
@@ -39,14 +37,11 @@ class DoughnutChart
     }
 
     /**
-     * @return ArrayObject
+     * @param DoughnutData $data
      */
-    public function getData()
+    public function addData(DoughnutData $data)
     {
-        if (!$this->data) {
-            $this->data = new ArrayObject();
-        }
-        return $this->data;
+        $this->data[] = $data;
     }
 
 }

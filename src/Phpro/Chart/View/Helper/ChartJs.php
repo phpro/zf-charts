@@ -34,10 +34,13 @@ class ChartJs extends AbstractHelper
      */
     public function render($chart)
     {
-        $viewModel = new ViewModel();
+        $viewModel = new ViewModel([
+            'id' => 'chart-' . spl_object_hash($chart),
+            'chart' => $chart,
+            'width' => 400,
+            'height' => 400,
+        ]);
         $viewModel->setTemplate('zf-charts/chartjs');
-        $viewModel->setVariable('chart', $chart);
-        $viewModel->setVariable('id', spl_object_hash($chart));
 
         return $this->getView()->render($viewModel);
     }

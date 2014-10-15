@@ -2,16 +2,13 @@
 
 namespace Phpro\Chart\ChartJs;
 
-use Phpro\Chart\ChartInterface;
-use Zend\Stdlib\AbstractOptions;
-
 /**
  * Class AbstractChart
  *
  * @package Phpro\Chart\ChartJs
  */
 abstract class AbstractChart
-    implements ChartInterface
+    implements ChartJsInterface
 {
 
     /**
@@ -31,19 +28,11 @@ abstract class AbstractChart
     protected $options;
 
     /**
-     * @return AbstractOptions[]
+     * @return mixed
      */
     public function getData()
     {
         return $this->data;
-    }
-
-    /**
-     * @param AbstractOptions $data
-     */
-    public function addData($data)
-    {
-        $this->data[] = $data;
     }
 
     /**
@@ -52,14 +41,6 @@ abstract class AbstractChart
     public function getOptions()
     {
         return $this->options;
-    }
-
-    /**
-     * @param GlobalOptions $options
-     */
-    public function setOptions($options)
-    {
-        $this->options = $options;
     }
 
     /**
