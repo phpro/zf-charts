@@ -1,0 +1,13 @@
+{
+    "name": "phpro/zf-charts",
+    "description": "A charts abstraction layer for ZF.",
+    "authors": [
+        {
+            "name": "Toon Verwerft",
+            "email": "toon.verwerft@phpro.be"
+        }
+    ],
+    "require": {
+      "zendframework/zend-stdlib": "~2.3"
+    }
+}

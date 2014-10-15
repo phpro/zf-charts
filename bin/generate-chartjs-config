@@ -1,0 +1,28 @@
+#!/usr/bin/env php
+<?php
+
+/**
+ * Use this command as followed.
+ * Copy in HTML console:
+ *
+ * var global = {}; // the configuration in the documentation
+ * JSON.stringify(global);
+ *
+ * Add json to generator.
+ *
+ * Run cli command:
+ * ./bin/generate-chartjs-config
+ */
+
+// Load Arguments:
+$jsonString =  <<<EOJSON
+{"label":"My Second dataset","fillColor":"rgba(151,187,205,0.2)","strokeColor":"rgba(151,187,205,1)","pointColor":"rgba(151,187,205,1)","pointStrokeColor":"#fff","pointHighlightFill":"#fff","pointHighlightStroke":"rgba(151,187,205,1)","data":[28,48,40,19,86,27,90]}
+EOJSON;
+$json = json_decode($jsonString, true);
+
+
+// Loop through argments
+foreach ($json as $key => $value) {
+
+    printf('protected $%s = %s;' . PHP_EOL . PHP_EOL, $key, var_export($value, true));
+}
