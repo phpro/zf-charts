@@ -1,0 +1,17 @@
+{
+  "name": "zf-charts",
+  "version": "0.0.0",
+  "authors": [
+    "Toon Verwerft <toon.verwerft@phpro.be>"
+  ],
+  "description": "A charts abstraction layer for ZF.",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "*",
+    "**/*"
+  ],
+  "dependencies": {
+    "Chart.js": "~0.2.0"
+  }
+}

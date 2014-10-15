@@ -13,7 +13,7 @@ class DoughnutChart
     extends AbstractChart
 {
 
-    const TYPE = 'Daughnut';
+    const TYPE = 'Doughnut';
 
     /**
      * @var string
@@ -46,5 +46,5 @@ class DoughnutChart
         }
         return $this->data;
     }
-    
+
 }

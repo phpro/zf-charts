@@ -8,5 +8,12 @@ return [
         'invokables' => [
             'chartjs' => 'Phpro\Chart\View\Helper\ChartJs',
         ]
-    ]
+    ],
+    'asset_manager' => [
+        'resolver_configs' => [
+            'paths' => [
+                __DIR__ . '/../assets',
+            ],
+        ],
+    ],
 ];
