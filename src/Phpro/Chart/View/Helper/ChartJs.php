@@ -56,8 +56,8 @@ class ChartJs extends AbstractHelper
         $viewModel = new ViewModel([
             'id' => 'chart-' . spl_object_hash($chart),
             'chart' => $chart,
-            'width' => $options['width'] ? $options['width'] : 400,
-            'height' => $options['height'] ? $options['height'] : 400,
+            'width' => isset($options['width']) ? $options['width'] : 400,
+            'height' => isset($options['height']) ? $options['height'] : 400,
         ]);
         $viewModel->setTemplate('zf-charts/chartjs');
 
