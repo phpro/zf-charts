@@ -6,7 +6,7 @@ return [
     ],
     'view_helpers' => [
         'invokables' => [
-            'chartjs' => 'Phpro/Chart/View/Helper/ChartJs',
+            'chartjs' => 'Phpro\Chart\View\Helper\ChartJs',
         ]
     ]
 ];
