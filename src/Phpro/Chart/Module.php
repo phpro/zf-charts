@@ -1,6 +1,6 @@
 <?php
 
-namespace Application;
+namespace Phpro\Chart;
 
 use Zend\ModuleManager\Feature\ConfigProviderInterface;
 
