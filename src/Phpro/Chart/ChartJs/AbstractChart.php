@@ -28,6 +28,16 @@ abstract class AbstractChart
     protected $options;
 
     /**
+     * @param OptionsInterface $options
+     * @param DataInterface $data
+     */
+    public function __construct(OptionsInterface $options = null, DataInterface $data = null)
+    {
+        $this->options = $options;
+        $this->data = $data;
+    }
+
+    /**
      * @return DataInterface
      */
     public function getData()
