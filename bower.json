@@ -12,6 +12,6 @@
     "**/*"
   ],
   "dependencies": {
-    "Chart.js": "~0.2.0"
+    "Chart.js": "~1.0"
   }
 }
