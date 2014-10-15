@@ -22,30 +22,42 @@ class ChartJs extends AbstractHelper
 
     /**
      * @param null|ChartInterface $chart
+     * @param array $options
+     *
      * @return string|self
      */
-    public function __invoke($chart = null)
+    public function __invoke($chart = null, $options = [])
     {
         if (null === $chart) {
             return $this;
         }
 
-        return $this->render($chart);
+        return $this->render($chart, $options);
+    }
+
+    /**
+     * Call this method if you want to include chartJS yourself!
+     */
+    public function markAsInitialized()
+    {
+        $this->chartJsInitialized = true;
     }
 
     /**
      * @param ChartInterface $chart
+     * @param array $options
      *
      * @return string
      */
-    public function render($chart)
+    public function render($chart, $options = [])
     {
         $this->initializeChartJs();
+
         $viewModel = new ViewModel([
             'id' => 'chart-' . spl_object_hash($chart),
             'chart' => $chart,
-            'width' => 400,
-            'height' => 400,
+            'width' => $options['width'] ? $options['width'] : 400,
+            'height' => $options['height'] ? $options['height'] : 400,
         ]);
         $viewModel->setTemplate('zf-charts/chartjs');
 
@@ -65,6 +77,6 @@ class ChartJs extends AbstractHelper
             '/zf-charts/vendor/Chart.js/Chart.min.js',
             'text/javascript'
         );
-        $this->chartJsInitialized = true;
+       $this->markAsInitialized();
     }
 }
