@@ -21,9 +21,9 @@ abstract class AbstractChart
     protected $type = '';
 
     /**
-     * @var AbstractOptions[]
+     * @var mixed
      */
-    protected $data = [];
+    protected $data;
 
     /**
      * @var GlobalOptions

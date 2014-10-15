@@ -1,6 +1,6 @@
 <?php
 
-namespace Phpro\Chart\View\Hepler;
+namespace Phpro\Chart\View\Helper;
 
 use Phpro\Chart\ChartInterface;
 use Zend\View\Helper\AbstractHelper;
@@ -35,7 +35,7 @@ class ChartJs extends AbstractHelper
     public function render($chart)
     {
         $viewModel = new ViewModel();
-        $viewModel->setTemplate('zf-charts/chartjs.phtml');
+        $viewModel->setTemplate('zf-charts/chartjs');
         $viewModel->setVariable('chart', $chart);
         $viewModel->setVariable('id', spl_object_hash($chart));
 

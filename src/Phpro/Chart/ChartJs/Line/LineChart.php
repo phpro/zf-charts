@@ -19,4 +19,26 @@ class LineChart extends AbstractChart
      */
     protected $type = self::TYPE;
 
-} 
+    /**
+     * @return LineOptions
+     */
+    public function getOptions()
+    {
+        if (!$this->options) {
+            $this->options = new LineOptions();
+        }
+        return $this->options;
+    }
+
+    /**
+     * @return LineData
+     */
+    public function getData()
+    {
+        if (!$this->data) {
+            $this->data = new LineData();
+        }
+        return $this->data;
+    }
+
+}
