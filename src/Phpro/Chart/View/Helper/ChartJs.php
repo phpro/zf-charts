@@ -62,7 +62,7 @@ class ChartJs extends AbstractHelper
         }
 
         $this->getView()->headScript()->appendFile(
-            '/zf-charts/vendor/Chart.js/chart.min.js',
+            '/zf-charts/vendor/Chart.js/Chart.min.js',
             'text/javascript'
         );
         $this->chartJsInitialized = true;
