@@ -1,10 +1,26 @@
-<div class="chart">
-    <canvas id="<?php echo $this->id ?>" width="<?php echo $this->width ?>" height="<?php echo $this->height ?>"></canvas>
+<div class="jschart">
+    <div class="chart">
+        <canvas id="chart-<?php echo $this->id ?>" width="<?php echo $this->width ?>" height="<?php echo $this->height ?>"></canvas>
+    </div>
+
+    <?php if ($this->showLegend): ?>
+        <div class="legend" id="legend-<?php echo $this->id ?>"></div>
+    <?php endif; ?>
+
     <script type="text/javascript">
-        var ctx = document.getElementById('<?php echo $this->id ?>').getContext("2d");
-        new Chart(ctx).<?php echo $this->chart->getType() ?>(
-            <?php echo json_encode($this->chart->getData()) ?>,
-            <?php echo json_encode($this->chart->getOptions()) ?>
-            );
+        (function(Chart, document) {
+            // Parse chart:
+            var context = document.getElementById('chart-<?php echo $this->id ?>').getContext("2d");
+            var currentChart = new Chart(context).<?php echo $this->chart->getType() ?>(
+                <?php echo json_encode($this->chart->getData()) ?>,
+                <?php echo json_encode($this->chart->getOptions()) ?>
+                );
+
+            // Parse legend:
+            var legend = document.getElementById('legend-<?php echo $this->id ?>');
+            if (legend) {
+                legend.innerHTML = currentChart.generateLegend();
+            }
+        })(Chart, document);
     </script>
 </div>
