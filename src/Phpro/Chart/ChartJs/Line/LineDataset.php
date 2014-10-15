@@ -11,6 +11,7 @@ use Zend\Stdlib\AbstractOptions;
  * @package Phpro\Chart\ChartJs\Line
  */
 class LineDataset extends AbstractOptions
+    implements DatasetInterface
 {
 
     /**

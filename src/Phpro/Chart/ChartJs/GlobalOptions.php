@@ -11,6 +11,7 @@ use Zend\Stdlib\AbstractOptions;
  * @package Phpro\Chart\ChartJs
  */
 class GlobalOptions extends AbstractOptions
+    implements OptionsInterface
 {
     /**
      * @var bool

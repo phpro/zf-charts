@@ -2,6 +2,7 @@
 
 namespace Phpro\Chart\ChartJs\Line;
 
+use Phpro\Chart\ChartJs\DataInterface;
 use Zend\Stdlib\AbstractOptions;
 
 /**
@@ -11,6 +12,7 @@ use Zend\Stdlib\AbstractOptions;
  * @package Phpro\Chart\ChartJs\Line
  */
 class LineData extends AbstractOptions
+    implements DataInterface
 {
 
     /**

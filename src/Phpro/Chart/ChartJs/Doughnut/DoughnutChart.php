@@ -37,11 +37,14 @@ class DoughnutChart
     }
 
     /**
-     * @param DoughnutData $data
+     * @return DoughnutData
      */
-    public function addData(DoughnutData $data)
+    public function getData()
     {
-        $this->data[] = $data;
+        if (!$this->data) {
+            $this->data = new DoughnutData();
+        }
+        return $this->data;
     }
-
+    
 }

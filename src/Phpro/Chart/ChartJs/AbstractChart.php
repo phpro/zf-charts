@@ -18,17 +18,17 @@ abstract class AbstractChart
     protected $type = '';
 
     /**
-     * @var mixed
+     * @var DataInterface
      */
     protected $data;
 
     /**
-     * @var GlobalOptions
+     * @var OptionsInterface
      */
     protected $options;
 
     /**
-     * @return mixed
+     * @return DataInterface
      */
     public function getData()
     {
@@ -36,7 +36,7 @@ abstract class AbstractChart
     }
 
     /**
-     * @return GlobalOptions
+     * @return OptionsInterface
      */
     public function getOptions()
     {
