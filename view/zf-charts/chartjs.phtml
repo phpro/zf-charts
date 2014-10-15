@@ -1,0 +1,10 @@
+<h1><?php echo $this->id; ?></h1>
+
+<canvas id="myChart" width="400" height="400"></canvas>
+<script type="text/javascript">
+    var ctx = $("#myChart").get(0).getContext("2d");
+    new Chart(ctx).<?php echo $this->chart->getType() ?>(
+        <?php echo $this->chart->getData()->toJson() ?>,
+        <?php echo $this->chart->getOptions()->toJson() ?>
+    );
+</script>
