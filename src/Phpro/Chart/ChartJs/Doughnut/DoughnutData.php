@@ -16,9 +16,9 @@ class DoughnutData
     protected $data = [];
 
     /**
-     * @param DoughnutDataSet $dataset
+     * @param DoughnutDataset $dataset
      */
-    public function addDataset(DoughnutDataSet $dataset)
+    public function addDataset(DoughnutDataset $dataset)
     {
         $this->data[] = $dataset;
     }

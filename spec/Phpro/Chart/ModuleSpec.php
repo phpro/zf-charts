@@ -7,8 +7,17 @@ use Prophecy\Argument;
 
 class ModuleSpec extends ObjectBehavior
 {
-    public function it_is_initializable()
+
+    /**
+     * should provide configuration
+     */
+    public function it_should_provide_configuration()
     {
-        $this->shouldHaveType('Phpro\Chart\Module');
+        $this->shouldImplement('Zend\ModuleManager\Feature\ConfigProviderInterface');
+    }
+
+    public function it_should_be_dependent_on_other_modules()
+    {
+        $this->shouldImplement('Zend\ModuleManager\Feature\DependencyIndicatorInterface');
     }
 }

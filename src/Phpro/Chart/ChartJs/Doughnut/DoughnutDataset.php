@@ -12,7 +12,7 @@ use Zend\Stdlib\Hydrator\ClassMethods;
  *
  * @package Phpro\Chart\ChartJs\Doughnut
  */
-class DoughnutDataSet extends AbstractOptions
+class DoughnutDataset extends AbstractOptions
     implements DatasetInterface
 {
 
