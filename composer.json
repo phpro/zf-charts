@@ -8,6 +8,7 @@
         }
     ],
     "require": {
+      "php": ">=5.4",
       "rwoverdijk/assetmanager":  "~1.4",
       "zendframework/zend-modulemanager": "~2.3",
       "zendframework/zend-stdlib": "~2.3",
@@ -16,7 +17,6 @@
     "require-dev": {
       "phpspec/phpspec": "~2.0",
       "fabpot/PHP-CS-Fixer": "~0.5"
-
     },
     "autoload": {
       "psr-0": {
