@@ -13,4 +13,4 @@ interface OptionsInterface
     extends JsonSerializable
 {
 
-} 
+}

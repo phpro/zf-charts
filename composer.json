@@ -1,6 +1,6 @@
 {
     "name": "phpro/zf-charts",
-    "description": "A charts abstraction layer for ZF.",
+    "description": "A chart abstraction layer for ZF.",
     "authors": [
         {
             "name": "Toon Verwerft",
@@ -12,6 +12,11 @@
       "zendframework/zend-modulemanager": "~2.3",
       "zendframework/zend-stdlib": "~2.3",
       "zendframework/zend-view": "~2.3"
+    },
+    "require-dev": {
+      "phpspec/phpspec": "~2.0",
+      "fabpot/PHP-CS-Fixer": "~0.5"
+
     },
     "autoload": {
       "psr-0": {

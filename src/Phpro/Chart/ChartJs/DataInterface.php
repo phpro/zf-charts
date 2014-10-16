@@ -13,4 +13,4 @@ interface DataInterface
     extends JsonSerializable
 {
 
-} 
+}

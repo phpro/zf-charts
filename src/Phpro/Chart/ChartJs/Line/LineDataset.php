@@ -193,4 +193,4 @@ class LineDataset extends AbstractOptions
         return $hydrator->extract($this);
     }
 
-} 
+}

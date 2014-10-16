@@ -42,17 +42,17 @@ class GlobalOptions extends AbstractOptions
     /**
      * @var int
      */
-    protected $scaleSteps = NULL;
+    protected $scaleSteps = null;
 
     /**
      * @var int
      */
-    protected $scaleStepWidth = NULL;
+    protected $scaleStepWidth = null;
 
     /**
      * @var int
      */
-    protected $scaleStartValue = NULL;
+    protected $scaleStartValue = null;
 
     /**
      * @var string
