@@ -1,6 +1,6 @@
 # Charts
 
-This package provides a PHP abstraction layer for multiple javascript libraries for Zend Framework 2.
+This package provides a PHP abstraction layer for multiple javascript chart libraries for Zend Framework 2.
 At the moment, following libraries are supported:
 
 - [Chart.js](http://www.chartjs.org/) (Lines, Doughnuts)
@@ -31,6 +31,11 @@ return array(
 ```
 
 ## ChartJS
+
+The API of the PHP library works exactly the same as the javascript API.
+ More information about the configurable options can be found in the 
+ [official documentation](http://www.chartjs.org/docs/)
+
 
 ### Line chart
 ```php
