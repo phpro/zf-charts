@@ -1,3 +1,8 @@
+> ## Repository abandoned 2020-11-27
+>
+> This repository has been archived since we are not using it anymore internally.
+> Feel free to use it AS-IS, we won't be providing any support anymore.
+
 # Charts
 
 This package provides a PHP abstraction layer for multiple javascript chart libraries for Zend Framework 2.
